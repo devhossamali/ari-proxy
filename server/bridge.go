@@ -3,9 +3,9 @@ package server
 import (
 	"context"
 
-	"github.com/devhossamali/ari-proxy/v5/proxy"
-	"github.com/devhossamali/ari/v5"
-	"github.com/devhossamali/ari/v5/rid"
+	"github.com/devhossamali/ari"
+	"github.com/devhossamali/ari-proxy/proxy"
+	"github.com/devhossamali/ari/rid"
 )
 
 func (s *Server) bridgeAddChannel(ctx context.Context, reply string, req *proxy.Request) {

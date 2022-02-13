@@ -5,9 +5,9 @@ import (
 
 	"github.com/inconshreveable/log15"
 
-	"github.com/devhossamali/ari-proxy/v5/client"
-	"github.com/devhossamali/ari/v5"
-	"github.com/devhossamali/ari/v5/ext/record"
+	"github.com/devhossamali/ari"
+	"github.com/devhossamali/ari-proxy/client"
+	"github.com/devhossamali/ari/ext/record"
 )
 
 var ariApp = "test"

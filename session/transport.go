@@ -1,6 +1,6 @@
 package session
 
-import "github.com/devhossamali/ari/v5"
+import "github.com/devhossamali/ari"
 
 // Transport defines how the commands and events are sent.
 type Transport interface {

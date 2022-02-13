@@ -46,7 +46,7 @@ Binary releases are available on the [releases page](https://github.com/devhossa
 You can also install the server manually:
 
 ```
-   go install github.com/devhossamali/ari-proxy/v5
+   go install github.com/devhossamali/ari-proxy
 ```
 
 ## Client library
@@ -62,8 +62,8 @@ Connecting the client to NATS is simple:
 
 ```go
 import (
-   "github.com/devhossamali/ari/v5"
-   "github.com/devhossamali/ari-proxy/v5/client"
+   "github.com/devhossamali/ari"
+   "github.com/devhossamali/ari-proxy/client"
 )
 
 func connect(ctx context.Context, appName string) (ari.Client,error) {

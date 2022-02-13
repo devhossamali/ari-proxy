@@ -3,7 +3,7 @@ package client
 import (
 	"testing"
 
-	"github.com/devhossamali/ari-proxy/v5/internal/integration"
+	"github.com/devhossamali/ari-proxy/internal/integration"
 )
 
 func TestLiveRecordingData(t *testing.T) {

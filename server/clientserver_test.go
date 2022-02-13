@@ -7,9 +7,9 @@ import (
 
 	"time"
 
-	"github.com/devhossamali/ari-proxy/v5/client"
-	"github.com/devhossamali/ari/v5"
-	"github.com/devhossamali/ari/v5/rid"
+	"github.com/devhossamali/ari"
+	"github.com/devhossamali/ari-proxy/client"
+	"github.com/devhossamali/ari/rid"
 	"github.com/nats-io/nats.go"
 )
 

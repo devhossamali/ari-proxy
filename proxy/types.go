@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/devhossamali/ari/v5"
+	"github.com/devhossamali/ari"
 )
 
 // AnnouncementInterval is the amount of time to wait between periodic service availability announcements

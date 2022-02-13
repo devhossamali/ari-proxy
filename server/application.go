@@ -5,7 +5,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/devhossamali/ari-proxy/v5/proxy"
+	"github.com/devhossamali/ari-proxy/proxy"
 )
 
 func (s *Server) applicationData(ctx context.Context, reply string, req *proxy.Request) {

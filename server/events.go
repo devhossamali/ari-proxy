@@ -1,6 +1,6 @@
 package server
 
-import "github.com/devhossamali/ari/v5"
+import "github.com/devhossamali/ari"
 
 func (s *Server) dialogsForEvent(e ari.Event) (ret []string) {
 	for _, k := range e.Keys() {

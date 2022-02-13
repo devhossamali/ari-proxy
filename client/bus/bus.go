@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/devhossamali/ari/v5"
+	"github.com/devhossamali/ari"
 	"github.com/inconshreveable/log15"
 
 	"github.com/nats-io/nats.go"

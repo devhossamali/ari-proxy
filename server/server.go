@@ -6,10 +6,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/devhossamali/ari-proxy/v5/proxy"
-	"github.com/devhossamali/ari-proxy/v5/server/dialog"
-	"github.com/devhossamali/ari/v5"
-	"github.com/devhossamali/ari/v5/client/native"
+	"github.com/devhossamali/ari"
+	"github.com/devhossamali/ari-proxy/proxy"
+	"github.com/devhossamali/ari-proxy/server/dialog"
+	"github.com/devhossamali/ari/client/native"
 	"github.com/rotisserie/eris"
 
 	"github.com/inconshreveable/log15"

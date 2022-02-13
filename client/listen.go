@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/devhossamali/ari/v5"
+	"github.com/devhossamali/ari"
 	"github.com/nats-io/nats.go"
 	"github.com/rotisserie/eris"
 )

@@ -3,7 +3,7 @@ package server
 import (
 	"context"
 
-	"github.com/devhossamali/ari-proxy/v5/proxy"
+	"github.com/devhossamali/ari-proxy/proxy"
 )
 
 func (s *Server) asteriskLoggingList(ctx context.Context, reply string, req *proxy.Request) {
