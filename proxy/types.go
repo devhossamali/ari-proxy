@@ -5,11 +5,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/CyCoreSystems/ari/v5"
+	"github.com/devhossamali/ari/v5"
 )
 
 // AnnouncementInterval is the amount of time to wait between periodic service availability announcements
 var AnnouncementInterval = time.Minute
+
 // EntityCheckInterval is the interval between checks against Asterisk entity ID
 var EntityCheckInterval = time.Second * 10
 

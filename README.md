@@ -62,7 +62,7 @@ Connecting the client to NATS is simple:
 
 ```go
 import (
-   "github.com/CyCoreSystems/ari/v5"
+   "github.com/devhossamali/ari/v5"
    "github.com/devhossamali/ari-proxy/v5/client"
 )
 
@@ -86,7 +86,7 @@ More documentation:
 
   * [ARI library docs](https://godoc.org/github.com/CyCoreSystems/ari)
 
-  * [ARI client examples](https://github.com/CyCoreSystems/ari/tree/master/_examples)
+  * [ARI client examples](https://github.com/devhossamali/ari/tree/master/_examples)
 
 
 ### Context

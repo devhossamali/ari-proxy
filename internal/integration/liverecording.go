@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/CyCoreSystems/ari/v5"
+	"github.com/devhossamali/ari/v5"
 )
 
 func TestLiveRecordingData(t *testing.T, s Server) {

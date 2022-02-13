@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/CyCoreSystems/ari/v5/client/native"
 	"github.com/devhossamali/ari-proxy/v5/server"
+	"github.com/devhossamali/ari/v5/client/native"
 
 	"github.com/inconshreveable/log15"
 	"github.com/nats-io/nats.go"

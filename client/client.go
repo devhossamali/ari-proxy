@@ -6,11 +6,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/CyCoreSystems/ari/v5"
-	"github.com/CyCoreSystems/ari/v5/rid"
 	"github.com/devhossamali/ari-proxy/v5/client/bus"
 	"github.com/devhossamali/ari-proxy/v5/client/cluster"
 	"github.com/devhossamali/ari-proxy/v5/proxy"
+	"github.com/devhossamali/ari/v5"
+	"github.com/devhossamali/ari/v5/rid"
 	"github.com/rotisserie/eris"
 
 	"github.com/inconshreveable/log15"

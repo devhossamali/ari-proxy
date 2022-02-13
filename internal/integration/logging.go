@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/CyCoreSystems/ari/v5"
+	"github.com/devhossamali/ari/v5"
 )
 
 func TestLoggingList(t *testing.T, s Server) {

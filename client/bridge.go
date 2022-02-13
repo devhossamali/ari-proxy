@@ -1,9 +1,9 @@
 package client
 
 import (
-	"github.com/CyCoreSystems/ari/v5"
-	"github.com/CyCoreSystems/ari/v5/rid"
 	"github.com/devhossamali/ari-proxy/v5/proxy"
+	"github.com/devhossamali/ari/v5"
+	"github.com/devhossamali/ari/v5/rid"
 )
 
 type bridge struct {

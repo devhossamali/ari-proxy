@@ -3,7 +3,7 @@ package integration
 import (
 	"testing"
 
-	"github.com/CyCoreSystems/ari/v5"
+	"github.com/devhossamali/ari/v5"
 	"github.com/rotisserie/eris"
 )
 
