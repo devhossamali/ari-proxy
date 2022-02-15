@@ -8,6 +8,8 @@ github.com/devhossamali/ari v1.0.0 h1:poXP+51wDp5Rp67RynG86oJ1bLrEqJ5QT2ZHqsI37g
 github.com/devhossamali/ari v1.0.0/go.mod h1:3dBiiFVgj1Sy8jUWe+GUhia+MGcJZ28LgaldrAcFVEc=
 github.com/devhossamali/ari v1.0.1 h1:MFqpECYKg76pU/EwpbEgF81907xCPc+7QecKH7b9/Cw=
 github.com/devhossamali/ari v1.0.1/go.mod h1:3dBiiFVgj1Sy8jUWe+GUhia+MGcJZ28LgaldrAcFVEc=
+github.com/devhossamali/ari v1.0.2 h1:9s18mSUaR5kKRBSbmMd3OumbWDX9hod+g/PjXV/Jo+g=
+github.com/devhossamali/ari v1.0.2/go.mod h1:3dBiiFVgj1Sy8jUWe+GUhia+MGcJZ28LgaldrAcFVEc=
 github.com/fsnotify/fsnotify v0.0.0-20170329110642-4da3e2cfbabc h1:fqUzyjP8DApxXq0dOZJE/NvqQkyjxiTy9ARNyRwBPEw=
 github.com/fsnotify/fsnotify v0.0.0-20170329110642-4da3e2cfbabc/go.mod h1:jwhsz4b93w/PPRr/qN1Yymfu8t87LnFCMoQvtojpjFo=
 github.com/go-stack/stack v1.8.0 h1:5SgMzNM5HxrEjV0ww2lTmX6E2Izsfxas4+YHWRs3Lsk=
