@@ -549,6 +549,8 @@ func (s *Server) dispatchRequest(ctx context.Context, reply string, req *proxy.R
 		f = s.recordingStoredCopy
 	case "RecordingStoredData":
 		f = s.recordingStoredData
+	case "RecordingStoredFile":
+		f = s.recordingStoredFile
 	case "RecordingStoredDelete":
 		f = s.recordingStoredDelete
 	case "RecordingStoredGet":
