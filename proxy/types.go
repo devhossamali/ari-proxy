@@ -35,21 +35,22 @@ func PingSubject(prefix string) string {
 
 // EntityData is a response which returns the data for a specific entity.
 type EntityData struct {
-	Application     *ari.ApplicationData     `json:"application,omitempty"`
-	Asterisk        *ari.AsteriskInfo        `json:"asterisk,omitempty"`
-	Bridge          *ari.BridgeData          `json:"bridge,omitempty"`
-	Channel         *ari.ChannelData         `json:"channel,omitempty"`
-	Config          *ari.ConfigData          `json:"config,omitempty"`
-	DeviceState     *ari.DeviceStateData     `json:"device_state,omitempty"`
-	Endpoint        *ari.EndpointData        `json:"endpoint,omitempty"`
-	LiveRecording   *ari.LiveRecordingData   `json:"live_recording,omitempty"`
-	Log             *ari.LogData             `json:"log,omitempty"`
-	Mailbox         *ari.MailboxData         `json:"mailbox,omitempty"`
-	Module          *ari.ModuleData          `json:"module,omitempty"`
-	Playback        *ari.PlaybackData        `json:"playback,omitempty"`
-	Sound           *ari.SoundData           `json:"sound,omitempty"`
-	StoredRecording *ari.StoredRecordingData `json:"stored_recording,omitempty"`
-	TextMessage     *ari.TextMessageData     `json:"text_message,omitempty"`
+	Application         *ari.ApplicationData     `json:"application,omitempty"`
+	Asterisk            *ari.AsteriskInfo        `json:"asterisk,omitempty"`
+	Bridge              *ari.BridgeData          `json:"bridge,omitempty"`
+	Channel             *ari.ChannelData         `json:"channel,omitempty"`
+	Config              *ari.ConfigData          `json:"config,omitempty"`
+	DeviceState         *ari.DeviceStateData     `json:"device_state,omitempty"`
+	Endpoint            *ari.EndpointData        `json:"endpoint,omitempty"`
+	LiveRecording       *ari.LiveRecordingData   `json:"live_recording,omitempty"`
+	Log                 *ari.LogData             `json:"log,omitempty"`
+	Mailbox             *ari.MailboxData         `json:"mailbox,omitempty"`
+	Module              *ari.ModuleData          `json:"module,omitempty"`
+	Playback            *ari.PlaybackData        `json:"playback,omitempty"`
+	Sound               *ari.SoundData           `json:"sound,omitempty"`
+	StoredRecording     *ari.StoredRecordingData `json:"stored_recording,omitempty"`
+	StoredRecordingFile *ari.StoredRecordingFile `json:"stored_recording_file,omitempty"`
+	TextMessage         *ari.TextMessageData     `json:"text_message,omitempty"`
 
 	Variable string `json:"variable,omitempty"`
 }
