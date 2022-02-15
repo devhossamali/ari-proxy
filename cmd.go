@@ -79,8 +79,10 @@ func init() {
 
 // readConfig reads in config file and ENV variables if set.
 func readConfig() {
-	viper.SetConfigName(".ari-proxy") // name of config file (without extension)
-	viper.AddConfigPath("$HOME")      // adding home directory as first search path
+	// viper.SetConfigName(".ari-proxy") // name of config file (without extension)
+	// viper.AddConfigPath("$HOME")      // adding home directory as first search path
+	viper.SetConfigName("ari-proxy") // name of config file (without extension)
+	viper.AddConfigPath("config")    // adding home directory as first search path
 
 	if cfgFile != "" { // enable ability to specify config file via flag
 		viper.SetConfigFile(cfgFile)
