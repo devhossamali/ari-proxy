@@ -32,6 +32,20 @@ func (s *Server) recordingStoredData(ctx context.Context, reply string, req *pro
 	})
 }
 
+func (s *Server) recordingStoredFile(ctx context.Context, reply string, req *proxy.Request) {
+	srf, err := s.ari.StoredRecording().File(req.Key)
+	if err != nil {
+		s.sendError(reply, err)
+		return
+	}
+
+	s.publish(reply, &proxy.Response{
+		Data: &proxy.EntityData{
+			StoredRecordingFile: srf,
+		},
+	})
+}
+
 func (s *Server) recordingStoredGet(ctx context.Context, reply string, req *proxy.Request) {
 	data, err := s.ari.StoredRecording().Data(req.Key)
 	if err != nil {
