@@ -49,7 +49,6 @@ type EntityData struct {
 	Playback            *ari.PlaybackData        `json:"playback,omitempty"`
 	Sound               *ari.SoundData           `json:"sound,omitempty"`
 	StoredRecording     *ari.StoredRecordingData `json:"stored_recording,omitempty"`
-	StoredRecordingFile *ari.StoredRecordingFile `json:"stored_recording_file,omitempty"`
 	TextMessage         *ari.TextMessageData     `json:"text_message,omitempty"`
 
 	Variable string `json:"variable,omitempty"`

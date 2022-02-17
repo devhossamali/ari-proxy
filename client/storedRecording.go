@@ -28,17 +28,6 @@ func (s *storedRecording) Get(key *ari.Key) *ari.StoredRecordingHandle {
 	return ari.NewStoredRecordingHandle(k, s, nil)
 }
 
-func (s *storedRecording) File(key *ari.Key) (*ari.StoredRecordingFile, error) {
-	data, err := s.c.dataRequest(&proxy.Request{
-		Kind: "RecordingStoredFile",
-		Key:  key,
-	})
-	if err != nil {
-		return nil, err
-	}
-	return data.StoredRecordingFile, nil
-}
-
 func (s *storedRecording) Data(key *ari.Key) (*ari.StoredRecordingData, error) {
 	data, err := s.c.dataRequest(&proxy.Request{
 		Kind: "RecordingStoredData",
