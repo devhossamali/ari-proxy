@@ -68,7 +68,7 @@ func New() *Server {
 }
 
 // Listen runs the given server, listening to ARI and NATS, as specified
-func (s *Server) Listen(ctx context.Context, ariOpts *native.Options, natsURI string) (err error) {
+func (s *Server) Listen(ctx context.Context, ariOpts *native.Options, natsURI string, natsOptions []nats.Option) (err error) {
 	ctx, cancel := context.WithCancel(ctx)
 	s.cancel = cancel
 

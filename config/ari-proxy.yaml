@@ -2,8 +2,9 @@ ari:
   application: main
   username: asterisk
   password: YHTEyYRo9SE9cXy6mKEVevJyFk9sFo2M
-  http_url: http://192.168.1.2:8088/ari
-  websocket_url: ws://192.168.1.2:8088/ari/events
+  http_url: http://192.168.2.2:8088/ari
+  websocket_url: ws://192.168.2.2:8088/ari/events
 
 nats:
-  url: nats://192.168.1.2:4222
+  url: nats://192.168.2.2:4222
+  token: SUAOY5JZ2WJKVR4UO2KJ2P3SW6FZFNWEOIMAXF4WZEUNVQXXUOKGM55CYE

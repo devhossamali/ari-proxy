@@ -105,6 +105,11 @@ func runServer(ctx context.Context, log log15.Logger) error {
 		natsURL = "nats://" + os.Getenv("NATS_SERVICE_HOST") + ":" + os.Getenv("NATS_SERVICE_PORT_CLIENT")
 	}
 
+	natsToken := viper.GetString("nats.token")
+	natsOptions := []nats.Option{
+		nats.Token(natsToken),
+	}
+
 	srv := server.New()
 	srv.Log = log
 
@@ -115,5 +120,5 @@ func runServer(ctx context.Context, log log15.Logger) error {
 		Password:     viper.GetString("ari.password"),
 		URL:          viper.GetString("ari.http_url"),
 		WebsocketURL: viper.GetString("ari.websocket_url"),
-	}, natsURL)
+	}, natsURL, natsOptions)
 }
