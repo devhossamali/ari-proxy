@@ -81,6 +81,10 @@ type core struct {
 	// the `NATS_URI` environment variable.
 	uri string
 
+	// token provies the token to which a NATS connection could be established. One
+	// the `NATS_TOKEN` environment variable.
+	token string
+
 	// annSub is the NATS subscription to proxy announcements
 	annSub *nats.Subscription
 
@@ -143,7 +147,7 @@ func (c *core) Start() error {
 
 	// Connect to NATS, if we do not already have a connection
 	if c.nc == nil {
-		n, err := nats.Connect(c.uri)
+		n, err := nats.Connect(c.uri, nats.Token(c.token))
 		if err != nil {
 			c.close()
 			return eris.Wrap(err, "failed to connect to NATS")
@@ -220,6 +224,10 @@ func New(ctx context.Context, opts ...OptionFunc) (*Client, error) {
 	// Load environment-based configurations
 	if os.Getenv("NATS_URI") != "" {
 		c.core.uri = os.Getenv("NATS_URI")
+	}
+
+	if os.Getenv("NATS_TOKEN") != "" {
+		c.core.token = os.Getenv("NATS_TOKEN")
 	}
 
 	// Load explicit configurations
@@ -313,6 +321,14 @@ func WithLogHandler(h log15.Handler) OptionFunc {
 // WithURI sets the NATS URI to which the client will attempt to connect.
 // The NATS URI may also be configured by the environment variable `NATS_URI`.
 func WithURI(uri string) OptionFunc {
+	return func(c *Client) {
+		c.core.uri = uri
+	}
+}
+
+// WithToken sets the NATS token to which the client will attempt to connect.
+// The NATS token may also be configured by the environment variable `NATS_TOKEN`.
+func WithToken(uri string) OptionFunc {
 	return func(c *Client) {
 		c.core.uri = uri
 	}
