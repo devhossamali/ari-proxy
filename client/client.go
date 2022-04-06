@@ -2,13 +2,13 @@ package client
 
 import (
 	"context"
-	"os"
 	"sync"
 	"time"
 
 	"github.com/devhossamali/ari"
 	"github.com/devhossamali/ari-proxy/client/bus"
 	"github.com/devhossamali/ari-proxy/client/cluster"
+	configurer "github.com/devhossamali/ari-proxy/config"
 	"github.com/devhossamali/ari-proxy/proxy"
 	"github.com/devhossamali/ari/rid"
 	"github.com/rotisserie/eris"
@@ -207,7 +207,7 @@ func New(ctx context.Context, opts ...OptionFunc) (*Client, error) {
 	ctx, cancel := context.WithCancel(ctx)
 
 	c := &Client{
-		appName: os.Getenv("ARI_APPLICATION"),
+		appName: configurer.Get("ARI_APPLICATION"),
 		core: &core{
 			cluster:           cluster.New(),
 			clusterMaxAge:     DefaultClusterMaxAge,
@@ -222,12 +222,12 @@ func New(ctx context.Context, opts ...OptionFunc) (*Client, error) {
 	c.log.SetHandler(log15.DiscardHandler())
 
 	// Load environment-based configurations
-	if os.Getenv("NATS_URI") != "" {
-		c.core.uri = os.Getenv("NATS_URI")
+	if configurer.Get("NATS_URI") != "" {
+		c.core.uri = configurer.Get("NATS_URI")
 	}
 
-	if os.Getenv("NATS_TOKEN") != "" {
-		c.core.token = os.Getenv("NATS_TOKEN")
+	if configurer.Get("NATS_TOKEN") != "" {
+		c.core.token = configurer.Get("NATS_TOKEN")
 	}
 
 	// Load explicit configurations

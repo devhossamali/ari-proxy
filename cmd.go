@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/devhossamali/ari-proxy/config"
+	configurer "github.com/devhossamali/ari-proxy/config"
 	"github.com/devhossamali/ari-proxy/server"
 	"github.com/devhossamali/ari/client/native"
 
@@ -101,12 +101,12 @@ func readConfig() {
 }
 
 func runServer(ctx context.Context, log log15.Logger) error {
-	natsURL := config.Get("NATS_URL")
-	if config.Get("NATS_SERVICE_HOST") != "" {
-		natsURL = "nats://" + os.Getenv("NATS_SERVICE_HOST") + ":" + os.Getenv("NATS_SERVICE_PORT_CLIENT")
+	natsURL := configurer.Get("NATS_URL")
+	if configurer.Get("NATS_SERVICE_HOST") != "" {
+		natsURL = "nats://" + configurer.Get("NATS_SERVICE_HOST") + ":" + configurer.Get("NATS_SERVICE_PORT_CLIENT")
 	}
 
-	natsToken := config.Get("NATS_TOKEN")
+	natsToken := configurer.Get("NATS_TOKEN")
 	natsOptions := []nats.Option{
 		nats.Token(natsToken),
 	}
@@ -116,10 +116,10 @@ func runServer(ctx context.Context, log log15.Logger) error {
 
 	log.Info("starting ari-proxy server", "version", version)
 	return srv.Listen(ctx, &native.Options{
-		Application:  config.Get("ARI_APPLICATION"),
-		Username:     config.Get("ARI_USERNAME"),
-		Password:     config.Get("ARI_PASSWORD"),
-		URL:          config.Get("ARI_HTTP_URL"),
-		WebsocketURL: config.Get("ARI_WEBSOCKET_URL"),
+		Application:  configurer.Get("ARI_APPLICATION"),
+		Username:     configurer.Get("ARI_USERNAME"),
+		Password:     configurer.Get("ARI_PASSWORD"),
+		URL:          configurer.Get("ARI_HTTP_URL"),
+		WebsocketURL: configurer.Get("ARI_WEBSOCKET_URL"),
 	}, natsURL, natsOptions)
 }
