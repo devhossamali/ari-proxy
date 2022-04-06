@@ -328,9 +328,9 @@ func WithURI(uri string) OptionFunc {
 
 // WithToken sets the NATS token to which the client will attempt to connect.
 // The NATS token may also be configured by the environment variable `NATS_TOKEN`.
-func WithToken(uri string) OptionFunc {
+func WithToken(token string) OptionFunc {
 	return func(c *Client) {
-		c.core.uri = uri
+		c.core.token = token
 	}
 }
 
